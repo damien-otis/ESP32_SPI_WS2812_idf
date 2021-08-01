@@ -7,7 +7,7 @@
 
 #include "SPI_ws2812.h"
 #define LED_MAX_NBER_LEDS 24*2
-#define LED_DMA_BUFFER_SIZE ((LED_MAX_NBER_LEDS * 16 * (24/4)))+1
+#define LED_DMA_BUFFER_SIZE ((LED_MAX_NBER_LEDS * sizeof(uint16_t) * (24/4)))+1
 #define LED_PIN GPIO_NUM_19
 typedef struct {
 	spi_host_device_t host;
